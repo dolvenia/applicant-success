@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-applicant-success',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicantSuccessComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  onDoneClick() {
+    this.router.navigate(['/applicant-profile-dashboard']); // Replace '/attachment' with the actual route path for the AttachmentComponent
+  }
 }
